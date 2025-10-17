@@ -1,0 +1,180 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(91, 125, 147, 0.5),
+            rgba(237, 8, 8, 0.5)),
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header {
+    background-color: #00FFFF;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+.details {
+    padding: 20px;
+}
+
+.nosotros {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hover-underline {
+
+
+    position: relative;
+    display: inline-block;
+}
+
+.hover-underline::after,
+.hover-underline::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #ff0000, #00ffff);
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+}
+
+.hover-underline::before {
+    top: -5px;
+    transform-origin: left;
+}
+
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+    transform: scaleX(1);
+}
+
+/* Tamaño uniforme para todas las imágenes */
+.gallery-img {
+    width: 100%;
+    height: 250px;
+    /* o el tamaño que prefieras */
+    object-fit: cover;
+    /* Recorta manteniendo proporción */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover */
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+/* Separación entre imágenes */
+.image-wrapper {
+    margin-bottom: 20px;
+}
+
+.hero {
+    background: linear-gradient(rgba(91, 125, 147, 0.5),
+            rgba(237, 8, 8, 0.5)),
+        url('assets/nature_005.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 10px 0px;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn-explore {
+
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+
+
+/* CARDS DE SECCIONES */
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-title {
+    font-weight: 700;
+}
+
+.card-body p {
+    font-size: 0.95rem;
+}
+
+
+
+/* EFECTO DE ENTRADA */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE AJUSTES */
+@media (max-width: 800px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}

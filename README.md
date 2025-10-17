@@ -1,2 +1,4 @@
-# Photo-galery-of-sydney
-his is my a web page which shows a simple but effective photogalery of sydney where a photo gets a description
+# Galería Interactiva
+
+Este proyecto muestra una galería con fotos de naturaleza y ciudad, usando HTML, CSS, Bootstrap y JavaScript.
+

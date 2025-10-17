@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería</title>
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Bootstrap (solo una vez) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="bg-dark text-white p-3 text-center">
+        <h1>Mi Galería</h1>
+        <a href="index.html" class="text-white me-3 hover-underline">Inicio</a>
+        <a href="nosotros.html" class="text-white hover-underline">Sobre Nosotros</a>
+    </header>
+
+    <main class="container my-4">
+        <!-- Botones para filtrar -->
+        <div class="text-center my-4">
+            <button class="btn btn-primary mx-1 filter-btn" data-filter="all">Mostrar Todo</button>
+            <button class="btn btn-secondary mx-1 filter-btn" data-filter="city">Ciudad</button>
+            <button class="btn btn-success mx-1 filter-btn" data-filter="nature">Naturaleza</button>
+        </div>
+
+        <!-- Contenedor de galería -->
+        <div class="container">
+            <div class="row" id="gallery-container">
+                <!-- Aquí irán todas las imágenes generadas por JS -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
